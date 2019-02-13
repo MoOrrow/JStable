@@ -25,7 +25,7 @@ window.onload = function() {
     {productId:14, productName: 'Товар 14', categoryId:4},
     {productId:24, productName: 'Товар 24', categoryId:4},
     {productId:25, productName: 'Товар 25', categoryId:5}
-    	];
+    ];
     
     var titleBlock = document.getElementsByClassName('tab__title-elem');	
 	for (var i = 0; i < titleBlock.length; i++) {
@@ -60,14 +60,12 @@ window.onload = function() {
 	}	
 	}
 	function clickTabs(event) {
-	
 		console.log(event);
-		if(event.target.className == 'tab__title-elem'){
-			
+		if(event.target.className == 'tab__title-elem') {
 			for (var i = 0; i < titleBlock.length; i++) {
-					titleBlock[i].classList.remove('tab__title-elem_active')
+				titleBlock[i].classList.remove('tab__title-elem_active');
 			}
-			event.target.classList.add('tab__title-elem_active')
+			event.target.classList.add('tab__title-elem_active');
 			var dataTab = event.target.getAttribute('data-tab');
 			var bodyElem = document.getElementsByClassName('tab__body-elem');
 			for (var i = 0; i < bodyElem.length; i++) {
